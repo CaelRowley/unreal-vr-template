@@ -1,2 +1,2 @@
 # unreal-vr-template
-A VR tempalte project for unreal engine using cpp
+A VR template project for unreal engine with finger tracking
