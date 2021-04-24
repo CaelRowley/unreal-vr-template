@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "VRTemplate",
+			"Path": "C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\VRTemplate\\Source\\VRTemplate.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "VRTemplateEditor",
+			"Path": "C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\VRTemplate\\Source\\VRTemplateEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
