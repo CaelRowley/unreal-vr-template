@@ -62,7 +62,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(APlayerCharacter); \
 	FORCEINLINE static uint32 __PPO__VRRoot() { return STRUCT_OFFSET(APlayerCharacter, VRRoot); } \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(APlayerCharacter, Camera); } \
 	FORCEINLINE static uint32 __PPO__ControllerInterface() { return STRUCT_OFFSET(APlayerCharacter, ControllerInterface); } \
-	FORCEINLINE static uint32 __PPO__LeftController() { return STRUCT_OFFSET(APlayerCharacter, LeftController); }
+	FORCEINLINE static uint32 __PPO__LeftController() { return STRUCT_OFFSET(APlayerCharacter, LeftController); } \
+	FORCEINLINE static uint32 __PPO__RightController() { return STRUCT_OFFSET(APlayerCharacter, RightController); }
 
 
 #define ValveIndexTemplate_Source_ValveIndexTemplate_Actors_Player_PlayerCharacter_h_13_PROLOG

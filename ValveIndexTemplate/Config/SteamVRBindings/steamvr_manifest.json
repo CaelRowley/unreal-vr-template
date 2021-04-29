@@ -148,11 +148,59 @@
 			"requirement": "optional"
 		},
 		{
+			"name": "/actions/main/in/TriggerLeft",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/TriggerRight",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/GrabLeft",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/GrabRight",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/TrackpadLeft",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/TrackpadRight",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/LeftThumbstickX,LeftThumbstickY X Y_axis2d",
+			"type": "vector2"
+		},
+		{
 			"name": "/actions/main/in/LeftThumbstickX axis",
 			"type": "vector1"
 		},
 		{
 			"name": "/actions/main/in/LeftThumbstickY axis",
+			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/RightThumbstickX,RightThumbstickY X Y_axis2d",
+			"type": "vector2"
+		},
+		{
+			"name": "/actions/main/in/SqueezeLeft axis",
+			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/SqueezeRight axis",
+			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/TriggerLeftAxis axis",
+			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/TriggerRightAxis axis",
 			"type": "vector1"
 		}
 	],
@@ -396,8 +444,20 @@
 			"/actions/main/out/vibrateleft": "Haptic (Left)",
 			"/actions/main/out/vibrateright": "Haptic (Right)",
 			"/actions/main/in/open_console": "Open Console",
+			"/actions/main/in/TriggerLeft": "TriggerLeft",
+			"/actions/main/in/TriggerRight": "TriggerRight",
+			"/actions/main/in/GrabLeft": "GrabLeft",
+			"/actions/main/in/GrabRight": "GrabRight",
+			"/actions/main/in/TrackpadLeft": "TrackpadLeft",
+			"/actions/main/in/TrackpadRight": "TrackpadRight",
+			"/actions/main/in/LeftThumbstickX,LeftThumbstickY X Y_axis2d": "LeftThumbstick",
 			"/actions/main/in/LeftThumbstickX axis": "LeftThumbstickX",
 			"/actions/main/in/LeftThumbstickY axis": "LeftThumbstickY",
+			"/actions/main/in/RightThumbstickX,RightThumbstickY X Y_axis2d": "RightThumbstick",
+			"/actions/main/in/SqueezeLeft axis": "SqueezeLeft",
+			"/actions/main/in/SqueezeRight axis": "SqueezeRight",
+			"/actions/main/in/TriggerLeftAxis axis": "TriggerLeftAxis",
+			"/actions/main/in/TriggerRightAxis axis": "TriggerRightAxis",
 			"/actions/main": "Main Game Actions"
 		}
 	]

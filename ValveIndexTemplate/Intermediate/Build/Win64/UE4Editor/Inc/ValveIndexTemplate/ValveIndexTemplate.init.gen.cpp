@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeValveIndexTemplate_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x8DB286F4,
+				0x0980EFB7,
 				0x1E61692F,
 				METADATA_PARAMS(nullptr, 0)
 			};
