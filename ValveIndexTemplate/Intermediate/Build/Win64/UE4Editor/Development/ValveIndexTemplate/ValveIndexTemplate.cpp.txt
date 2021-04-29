@@ -1,0 +1,2 @@
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Intermediate\Build\Win64\UE4Editor\Development\ValveIndexTemplate\Definitions.ValveIndexTemplate.h
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Source\ValveIndexTemplate\ValveIndexTemplate.h

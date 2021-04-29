@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "ValveIndexTemplate",
+			"Path": "C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\ValveIndexTemplate\\Source\\ValveIndexTemplate.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ValveIndexTemplateEditor",
+			"Path": "C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\ValveIndexTemplate\\Source\\ValveIndexTemplateEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

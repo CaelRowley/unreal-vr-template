@@ -1,0 +1,15 @@
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Intermediate\Build\Win64\UE4Editor\Development\ValveIndexTemplate\Definitions.ValveIndexTemplate.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Source\ValveIndexTemplate/Actors/Player/PlayerCharacter.h
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Source\ValveIndexTemplate/Actors/Player/Controllers/ControllerInterface.h
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Intermediate\Build\Win64\UE4Editor\Inc\ValveIndexTemplate\ControllerInterface.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\Cael\git\games\unreal\unreal-vr-template\ValveIndexTemplate\Intermediate\Build\Win64\UE4Editor\Inc\ValveIndexTemplate\PlayerCharacter.generated.h
