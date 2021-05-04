@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ValveIndexTemplate.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9D7F9B55-8EE2-43AB-9D0D-7242CFF9B5E1}</UniqueIdentifier>
+      <UniqueIdentifier>{3A569E5E-78BD-4B74-80AB-65FF8E8AAE81}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ValveIndexTemplate.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{74141DE2-0C59-45FF-A7FC-62CECDC77694}</UniqueIdentifier>
+      <UniqueIdentifier>{57EB37F6-8501-4F67-93C3-957712911F50}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\SteamVRBindings">
-      <UniqueIdentifier>{3BCB8D6E-71BF-4156-AE41-40E17B0E65A4}</UniqueIdentifier>
+      <UniqueIdentifier>{EC1C236E-E1C4-498F-8412-C775D084B164}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\SteamVRBindings\gamepad.json">
       <Filter>Config\SteamVRBindings</Filter>
@@ -111,7 +111,7 @@
       <Filter>Config\SteamVRBindings</Filter>
     </None>
     <Filter Include="Source\ValveIndexTemplate">
-      <UniqueIdentifier>{D517BC6A-3C7B-4A68-A2FE-321456D7D25C}</UniqueIdentifier>
+      <UniqueIdentifier>{EA1C20FF-E8DA-43CC-A235-2884C0D76456}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ValveIndexTemplate\ValveIndexTemplate.Build.cs">
       <Filter>Source\ValveIndexTemplate</Filter>
@@ -129,10 +129,10 @@
       <Filter>Source\ValveIndexTemplate</Filter>
     </ClInclude>
     <Filter Include="Source\ValveIndexTemplate\Actors">
-      <UniqueIdentifier>{45DA270B-137E-4F1A-AAC9-F23A2DB6934D}</UniqueIdentifier>
+      <UniqueIdentifier>{99161FD7-56EC-4244-A3C9-3AED56591964}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\ValveIndexTemplate\Actors\Player">
-      <UniqueIdentifier>{B30C00E0-13C2-4330-BBE2-CD6BFF0E4523}</UniqueIdentifier>
+      <UniqueIdentifier>{3C9E7624-6F86-48B3-AC50-283F283D6C05}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ValveIndexTemplate\Actors\Player\PlayerCharacter.cpp">
       <Filter>Source\ValveIndexTemplate\Actors\Player</Filter>
@@ -141,8 +141,14 @@
       <Filter>Source\ValveIndexTemplate\Actors\Player</Filter>
     </ClInclude>
     <Filter Include="Source\ValveIndexTemplate\Actors\Player\Controllers">
-      <UniqueIdentifier>{E45444AA-CE08-42B9-90A4-7D630F1F5026}</UniqueIdentifier>
+      <UniqueIdentifier>{00B38397-74EB-41EF-980A-B019B6169B12}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\ValveIndexTemplate\Actors\Player\Controllers\ControllerHand.cpp">
+      <Filter>Source\ValveIndexTemplate\Actors\Player\Controllers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ValveIndexTemplate\Actors\Player\Controllers\ControllerHand.h">
+      <Filter>Source\ValveIndexTemplate\Actors\Player\Controllers</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\ValveIndexTemplate\Actors\Player\Controllers\ControllerInterface.cpp">
       <Filter>Source\ValveIndexTemplate\Actors\Player\Controllers</Filter>
     </ClCompile>

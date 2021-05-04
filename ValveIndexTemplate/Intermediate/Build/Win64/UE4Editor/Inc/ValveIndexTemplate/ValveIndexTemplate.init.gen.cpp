@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeValveIndexTemplate_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x0980EFB7,
-				0x1E61692F,
+				0x7B5E2508,
+				0xFC1C4C24,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
