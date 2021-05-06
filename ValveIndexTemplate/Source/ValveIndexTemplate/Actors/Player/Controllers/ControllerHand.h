@@ -17,6 +17,7 @@ class VALVEINDEXTEMPLATE_API AControllerHand : public AControllerInterface
 	GENERATED_BODY()
 
 public:
+	AControllerHand();
 
 	virtual void Initialize(EControllerHand TrackingSource) override;
 
