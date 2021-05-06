@@ -36,7 +36,7 @@ public: \
 
 #define ValveIndexTemplate_Source_ValveIndexTemplate_Actors_Player_Controllers_ControllerHand_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AControllerHand(const FObjectInitializer& ObjectInitializer); \
+	NO_API AControllerHand(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AControllerHand) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AControllerHand); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AControllerHand); \
@@ -48,6 +48,8 @@ public:
 
 
 #define ValveIndexTemplate_Source_ValveIndexTemplate_Actors_Player_Controllers_ControllerHand_h_17_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API AControllerHand() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AControllerHand(AControllerHand&&); \

@@ -4,17 +4,17 @@
 #include "ControllerHand.h"
 
 // Sets default values
-AControllerHand::AControllerHand()
-{
-	MotionController->SetShowDeviceModel(false);
-}
+//AControllerHand::AControllerHand()
+//{
+//	MotionController->SetShowDeviceModel(true);
+//}
 
 void AControllerHand::Initialize(EControllerHand TrackingSource)
 {
 	Super::Initialize(TrackingSource);
 
 	if (MotionController->GetTrackingSource() == EControllerHand::Left) {
-		MotionController->SetRelativeScale3D(FVector(1.0, -1.0, 1.0));
+		//MotionController->SetRelativeScale3D(FVector(1.0, -1.0, 1.0));
 		UE_LOG(LogTemp, Warning, TEXT("SetRelativeScale3D: LEFT"));
 	}
 
