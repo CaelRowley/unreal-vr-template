@@ -1,8 +1,0 @@
-{
-	"SourceFiles": [
-		"C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\ValveIndexTemplate\\Source\\ValveIndexTemplate\\ValveIndexTemplate.Build.cs",
-		"C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\ValveIndexTemplate\\Source\\ValveIndexTemplate.Target.cs",
-		"C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\ValveIndexTemplate\\Source\\ValveIndexTemplateEditor.Target.cs"
-	],
-	"EngineVersion": "4.26.2"
-}

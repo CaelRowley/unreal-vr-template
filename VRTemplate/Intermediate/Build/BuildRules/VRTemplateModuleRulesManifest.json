@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\VRTemplate\\Source\\VRTemplate\\VRTemplate.Build.cs",
+		"C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\VRTemplate\\Source\\VRTemplate.Target.cs",
+		"C:\\Users\\Cael\\git\\games\\unreal\\unreal-vr-template\\VRTemplate\\Source\\VRTemplateEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}

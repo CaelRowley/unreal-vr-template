@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\VRTemplate.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{E2BDAE75-C367-48DA-A39A-5743DC6B1BD4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\VRTemplate.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\VRTemplateEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{CC075EA4-97C8-48BC-8B35-166DC50AC0DC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\VRTemplate">
+      <UniqueIdentifier>{9FA339ED-7B2C-4719-90A4-5195E324183A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\VRTemplate\VRTemplate.Build.cs">
+      <Filter>Source\VRTemplate</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\VRTemplate\VRTemplate.cpp">
+      <Filter>Source\VRTemplate</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VRTemplate\VRTemplate.h">
+      <Filter>Source\VRTemplate</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\VRTemplate\VRTemplateGameModeBase.cpp">
+      <Filter>Source\VRTemplate</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VRTemplate\VRTemplateGameModeBase.h">
+      <Filter>Source\VRTemplate</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
