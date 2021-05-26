@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\VRTemplate.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{E2BDAE75-C367-48DA-A39A-5743DC6B1BD4}</UniqueIdentifier>
+      <UniqueIdentifier>{54E7A1F6-DA46-40FE-8632-F91ABADA692F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\VRTemplate.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{CC075EA4-97C8-48BC-8B35-166DC50AC0DC}</UniqueIdentifier>
+      <UniqueIdentifier>{D094F1FE-0840-4DDC-8A0F-BD8F61E4A87B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,95 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\steamvr_ue_editor_app.json">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\SteamVRBindings">
+      <UniqueIdentifier>{AB24315F-A2A7-47F3-8E66-18F51C511413}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\SteamVRBindings\gamepad.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\holographic_controller.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\hpmotioncontroller.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\indexhmd.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\knuckles.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\oculus_touch.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\rift.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\steamvr_manifest.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_controller.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_cosmos_controller.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_pro.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_camera.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_chest.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_handed.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_keyboard.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_left_elbow.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_left_foot.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_left_knee.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_left_shoulder.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_right_elbow.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_right_foot.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_right_knee.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_right_shoulder.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
+    <None Include="..\..\Config\SteamVRBindings\vive_tracker_waist.json">
+      <Filter>Config\SteamVRBindings</Filter>
+    </None>
     <Filter Include="Source\VRTemplate">
-      <UniqueIdentifier>{9FA339ED-7B2C-4719-90A4-5195E324183A}</UniqueIdentifier>
+      <UniqueIdentifier>{A01A10AE-090C-46E7-BC54-C478999C4463}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\VRTemplate\VRTemplate.Build.cs">
       <Filter>Source\VRTemplate</Filter>
@@ -40,6 +127,27 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\VRTemplate\VRTemplateGameModeBase.h">
       <Filter>Source\VRTemplate</Filter>
+    </ClInclude>
+    <Filter Include="Source\VRTemplate\Actors">
+      <UniqueIdentifier>{CAEA083E-24E9-4674-A7F2-7003AEECB00B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\VRTemplate\Actors\Player">
+      <UniqueIdentifier>{E65C199A-ABD9-421C-972C-75C934099178}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\VRTemplate\Actors\Player\PlayerPawn.cpp">
+      <Filter>Source\VRTemplate\Actors\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VRTemplate\Actors\Player\PlayerPawn.h">
+      <Filter>Source\VRTemplate\Actors\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\VRTemplate\Actors\Player\Controllers">
+      <UniqueIdentifier>{B4B519EA-6541-4CA8-9982-D3F0DE5943C3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\VRTemplate\Actors\Player\Controllers\ControllerInterface.cpp">
+      <Filter>Source\VRTemplate\Actors\Player\Controllers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\VRTemplate\Actors\Player\Controllers\ControllerInterface.h">
+      <Filter>Source\VRTemplate\Actors\Player\Controllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
