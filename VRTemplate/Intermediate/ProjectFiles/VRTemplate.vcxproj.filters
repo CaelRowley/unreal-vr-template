@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\VRTemplate.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{54E7A1F6-DA46-40FE-8632-F91ABADA692F}</UniqueIdentifier>
+      <UniqueIdentifier>{0C2C462A-6104-4ECA-93E1-78F3BF571F13}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\VRTemplate.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{D094F1FE-0840-4DDC-8A0F-BD8F61E4A87B}</UniqueIdentifier>
+      <UniqueIdentifier>{5972ADB1-717C-4987-8B19-1FB2719F25C4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Config\SteamVRBindings">
-      <UniqueIdentifier>{AB24315F-A2A7-47F3-8E66-18F51C511413}</UniqueIdentifier>
+      <UniqueIdentifier>{C1EB8F7E-E936-469C-B7BF-693C554BAF7F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\SteamVRBindings\gamepad.json">
       <Filter>Config\SteamVRBindings</Filter>
@@ -111,7 +111,7 @@
       <Filter>Config\SteamVRBindings</Filter>
     </None>
     <Filter Include="Source\VRTemplate">
-      <UniqueIdentifier>{A01A10AE-090C-46E7-BC54-C478999C4463}</UniqueIdentifier>
+      <UniqueIdentifier>{80ABF543-4C2F-41B1-89F4-31869DC630C2}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\VRTemplate\VRTemplate.Build.cs">
       <Filter>Source\VRTemplate</Filter>
@@ -129,10 +129,10 @@
       <Filter>Source\VRTemplate</Filter>
     </ClInclude>
     <Filter Include="Source\VRTemplate\Actors">
-      <UniqueIdentifier>{CAEA083E-24E9-4674-A7F2-7003AEECB00B}</UniqueIdentifier>
+      <UniqueIdentifier>{541EEFC3-A6B4-436A-9347-26EE102A2613}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\VRTemplate\Actors\Player">
-      <UniqueIdentifier>{E65C199A-ABD9-421C-972C-75C934099178}</UniqueIdentifier>
+      <UniqueIdentifier>{0C0245D0-9AB8-4099-B248-BDBB784143AF}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\VRTemplate\Actors\Player\PlayerPawn.cpp">
       <Filter>Source\VRTemplate\Actors\Player</Filter>
@@ -141,7 +141,7 @@
       <Filter>Source\VRTemplate\Actors\Player</Filter>
     </ClInclude>
     <Filter Include="Source\VRTemplate\Actors\Player\Controllers">
-      <UniqueIdentifier>{B4B519EA-6541-4CA8-9982-D3F0DE5943C3}</UniqueIdentifier>
+      <UniqueIdentifier>{3997AF9E-1034-4E82-A9A6-59821518AE70}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\VRTemplate\Actors\Player\Controllers\ControllerInterface.cpp">
       <Filter>Source\VRTemplate\Actors\Player\Controllers</Filter>
