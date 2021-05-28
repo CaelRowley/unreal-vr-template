@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "VRTemplate/Actors/Player/Controllers/ControllerInterface.h"
+
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "PlayerPawn.generated.h"
@@ -26,4 +28,12 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<AControllerInterface> ControllerInterface;
+	UPROPERTY(VisibleAnywhere)
+	AControllerInterface* LeftController2;
+
+	// Action mappings
+	inline void TriggerLeftPressed() { LeftController2->TriggerPressed(); }
+	inline void TriggerLeftReleased() { LeftController2->TriggerReleased(); }
 };

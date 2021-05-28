@@ -16,6 +16,13 @@ void APlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	LeftController2 = GetWorld()->SpawnActor<AControllerInterface>(ControllerInterface);
+	if (LeftController2 != nullptr)
+	{
+		LeftController2->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
+	//	LeftController2->Initialize(EControllerHand::Left);
+		LeftController2->SetOwner(this);
+	}
 }
 
 // Called every frame
@@ -29,6 +36,10 @@ void APlayerPawn::Tick(float DeltaTime)
 void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	// Action mappings
+	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Pressed, this, &APlayerPawn::TriggerLeftPressed);
+	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Released, this, &APlayerPawn::TriggerLeftReleased);
 
 }
 

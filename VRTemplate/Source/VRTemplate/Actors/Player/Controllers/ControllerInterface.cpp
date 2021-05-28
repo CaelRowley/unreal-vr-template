@@ -7,21 +7,29 @@
 AControllerInterface::AControllerInterface()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
+
+	//MotionController2 = CreateDefaultSubobject<UMotionControllerComponent>(TEXT("MotionController2"));
+	//MotionController2->SetShowDeviceModel(true);
+	//SetRootComponent(MotionController2);
+
 
 }
 
-// Called when the game starts or when spawned
-void AControllerInterface::BeginPlay()
+void AControllerInterface::Initialize(EControllerHand TrackingSource)
 {
-	Super::BeginPlay();
-	
+	//MotionController2->SetTrackingSource(TrackingSource);
 }
 
-// Called every frame
-void AControllerInterface::Tick(float DeltaTime)
+// Action mappings
+void AControllerInterface::TriggerPressed()
 {
-	Super::Tick(DeltaTime);
-
+	UE_LOG(LogTemp, Warning, TEXT("TriggerPressed()"));
+	//UE_LOG(LogTemp, Warning, TEXT("%s->TriggerPressed()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
 }
 
+void AControllerInterface::TriggerReleased()
+{
+	UE_LOG(LogTemp, Warning, TEXT("TriggerPressed()"));
+	//UE_LOG(LogTemp, Warning, TEXT("%s->TriggerReleased()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
+}

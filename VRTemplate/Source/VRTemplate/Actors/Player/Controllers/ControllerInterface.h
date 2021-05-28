@@ -2,6 +2,8 @@
 
 #pragma once
 
+#include "MotionControllerComponent.h"
+
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "ControllerInterface.generated.h"
@@ -10,17 +12,18 @@ UCLASS()
 class VRTEMPLATE_API AControllerInterface : public AActor
 {
 	GENERATED_BODY()
-	
+
 public:	
 	// Sets default values for this actor's properties
 	AControllerInterface();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	//UPROPERTY(VisibleAnywhere)
+	//class UMotionControllerComponent* MotionController2;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	virtual void Initialize(EControllerHand TrackingSource);
+
+	// Action mappings
+	virtual void TriggerPressed();
+	virtual void TriggerReleased();
 
 };
