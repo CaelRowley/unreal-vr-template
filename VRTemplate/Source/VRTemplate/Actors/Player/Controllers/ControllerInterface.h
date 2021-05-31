@@ -17,11 +17,6 @@ public:
 	// Sets default values for this actor's properties
 	AControllerInterface();
 
-	//UPROPERTY(VisibleAnywhere)
-	//class UMotionControllerComponent* MotionController2;
-
-	virtual void Initialize(EControllerHand TrackingSource);
-
 	// Action mappings
 	virtual void TriggerPressed();
 	virtual void TriggerReleased();

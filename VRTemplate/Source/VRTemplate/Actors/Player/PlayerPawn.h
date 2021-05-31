@@ -28,12 +28,16 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<AControllerInterface> ControllerInterface;
-	UPROPERTY(VisibleAnywhere)
-	AControllerInterface* LeftController2;
+
+	UPROPERTY(BlueprintReadWrite)
+	AControllerInterface* LeftController;
+	UPROPERTY(BlueprintReadWrite)
+	AControllerInterface* RightController;
 
 	// Action mappings
-	inline void TriggerLeftPressed() { LeftController2->TriggerPressed(); }
-	inline void TriggerLeftReleased() { LeftController2->TriggerReleased(); }
+	inline void TriggerLeftPressed() { LeftController->TriggerPressed(); }
+	inline void TriggerLeftReleased() { LeftController->TriggerReleased(); }
+
+	inline void TriggerRightPressed() { RightController->TriggerPressed(); }
+	inline void TriggerRightReleased() { RightController->TriggerReleased(); }
 };

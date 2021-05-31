@@ -16,13 +16,6 @@ void APlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	LeftController2 = GetWorld()->SpawnActor<AControllerInterface>(ControllerInterface);
-	if (LeftController2 != nullptr)
-	{
-		LeftController2->AttachToComponent(GetRootComponent(), FAttachmentTransformRules::KeepRelativeTransform);
-	//	LeftController2->Initialize(EControllerHand::Left);
-		LeftController2->SetOwner(this);
-	}
 }
 
 // Called every frame
@@ -40,6 +33,9 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	// Action mappings
 	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Pressed, this, &APlayerPawn::TriggerLeftPressed);
 	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Released, this, &APlayerPawn::TriggerLeftReleased);
+
+	PlayerInputComponent->BindAction(TEXT("TriggerRight"), IE_Pressed, this, &APlayerPawn::TriggerRightPressed);
+	PlayerInputComponent->BindAction(TEXT("TriggerRight"), IE_Released, this, &APlayerPawn::TriggerRightReleased);
 
 }
 
