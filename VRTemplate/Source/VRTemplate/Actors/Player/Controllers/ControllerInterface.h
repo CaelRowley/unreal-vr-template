@@ -18,7 +18,8 @@ public:
 	AControllerInterface();
 
 	// Action mappings
-	virtual void TriggerPressed();
-	virtual void TriggerReleased();
-
+	UFUNCTION(BlueprintNativeEvent)
+	void GrabPressed();
+	UFUNCTION(BlueprintNativeEvent)
+	void GrabReleased();
 };

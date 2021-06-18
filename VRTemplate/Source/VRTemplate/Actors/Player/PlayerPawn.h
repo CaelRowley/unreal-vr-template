@@ -35,9 +35,9 @@ public:
 	AControllerInterface* RightController;
 
 	// Action mappings
-	inline void TriggerLeftPressed() { LeftController->TriggerPressed(); }
-	inline void TriggerLeftReleased() { LeftController->TriggerReleased(); }
+	inline void GrabLeftPressed() { LeftController->GrabPressed(); }
+	inline void GrabLeftReleased() { LeftController->GrabReleased(); }
 
-	inline void TriggerRightPressed() { RightController->TriggerPressed(); }
-	inline void TriggerRightReleased() { RightController->TriggerReleased(); }
+	inline void GrabRightPressed() { RightController->GrabPressed(); }
+	inline void GrabRightReleased() { RightController->GrabReleased(); }
 };

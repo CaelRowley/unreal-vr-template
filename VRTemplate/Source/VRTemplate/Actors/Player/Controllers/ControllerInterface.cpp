@@ -12,14 +12,14 @@ AControllerInterface::AControllerInterface()
 }
 
 // Action mappings
-void AControllerInterface::TriggerPressed()
+void AControllerInterface::GrabPressed_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TriggerPressed()"));
-	//UE_LOG(LogTemp, Warning, TEXT("%s->TriggerPressed()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
+	UE_LOG(LogTemp, Warning, TEXT("GrabPressed()"));
+	//UE_LOG(LogTemp, Warning, TEXT("%s->GrabPressed()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
 }
 
-void AControllerInterface::TriggerReleased()
+void AControllerInterface::GrabReleased_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TriggerReleased()"));
-	//UE_LOG(LogTemp, Warning, TEXT("%s->TriggerReleased()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
+	UE_LOG(LogTemp, Warning, TEXT("GrabReleased()"));
+	//UE_LOG(LogTemp, Warning, TEXT("%s->GrabReleased()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
 }

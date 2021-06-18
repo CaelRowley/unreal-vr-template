@@ -31,11 +31,11 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	// Action mappings
-	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Pressed, this, &APlayerPawn::TriggerLeftPressed);
-	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Released, this, &APlayerPawn::TriggerLeftReleased);
+	PlayerInputComponent->BindAction(TEXT("GrabLeft"), IE_Pressed, this, &APlayerPawn::GrabLeftPressed);
+	PlayerInputComponent->BindAction(TEXT("GrabLeft"), IE_Released, this, &APlayerPawn::GrabLeftReleased);
 
-	PlayerInputComponent->BindAction(TEXT("TriggerRight"), IE_Pressed, this, &APlayerPawn::TriggerRightPressed);
-	PlayerInputComponent->BindAction(TEXT("TriggerRight"), IE_Released, this, &APlayerPawn::TriggerRightReleased);
+	PlayerInputComponent->BindAction(TEXT("GrabRight"), IE_Pressed, this, &APlayerPawn::GrabRightPressed);
+	PlayerInputComponent->BindAction(TEXT("GrabRight"), IE_Released, this, &APlayerPawn::GrabRightReleased);
 
 }
 
