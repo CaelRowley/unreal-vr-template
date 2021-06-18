@@ -17,9 +17,19 @@ public:
 	// Sets default values for this actor's properties
 	AControllerInterface();
 
+	void PairControllers(AControllerInterface* Controller);
+
+	UPROPERTY(BlueprintReadOnly)
+	AControllerInterface* OtherController;
+
 	// Action mappings
 	UFUNCTION(BlueprintNativeEvent)
 	void GrabPressed();
 	UFUNCTION(BlueprintNativeEvent)
 	void GrabReleased();
+
+	UFUNCTION(BlueprintNativeEvent)
+	void TeleportPressed();
+	UFUNCTION(BlueprintNativeEvent)
+	void TeleportReleased();
 };

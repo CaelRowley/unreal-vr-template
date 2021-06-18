@@ -11,15 +11,29 @@ AControllerInterface::AControllerInterface()
 
 }
 
+void AControllerInterface::PairControllers(AControllerInterface* Controller)
+{
+	OtherController = Cast<AControllerInterface>(Controller);
+	OtherController->OtherController = this;
+}
+
 // Action mappings
 void AControllerInterface::GrabPressed_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("GrabPressed()"));
-	//UE_LOG(LogTemp, Warning, TEXT("%s->GrabPressed()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
 }
 
 void AControllerInterface::GrabReleased_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("GrabReleased()"));
-	//UE_LOG(LogTemp, Warning, TEXT("%s->GrabReleased()"), *FString(MotionController2->GetTrackingSource() == EControllerHand::Right ? "RightController" : "LeftController"));
+}
+
+void AControllerInterface::TeleportPressed_Implementation()
+{
+	UE_LOG(LogTemp, Warning, TEXT("TeleportPressed()"));
+}
+
+void AControllerInterface::TeleportReleased_Implementation()
+{
+	UE_LOG(LogTemp, Warning, TEXT("TeleportReleased()"));
 }

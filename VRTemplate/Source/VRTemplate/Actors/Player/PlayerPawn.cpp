@@ -16,6 +16,7 @@ void APlayerPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	LeftController->PairControllers(RightController);
 }
 
 // Called every frame
@@ -33,9 +34,12 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	// Action mappings
 	PlayerInputComponent->BindAction(TEXT("GrabLeft"), IE_Pressed, this, &APlayerPawn::GrabLeftPressed);
 	PlayerInputComponent->BindAction(TEXT("GrabLeft"), IE_Released, this, &APlayerPawn::GrabLeftReleased);
-
 	PlayerInputComponent->BindAction(TEXT("GrabRight"), IE_Pressed, this, &APlayerPawn::GrabRightPressed);
 	PlayerInputComponent->BindAction(TEXT("GrabRight"), IE_Released, this, &APlayerPawn::GrabRightReleased);
 
+	PlayerInputComponent->BindAction(TEXT("TeleportLeft"), IE_Pressed, this, &APlayerPawn::TeleportLeftPressed);
+	PlayerInputComponent->BindAction(TEXT("TeleportLeft"), IE_Released, this, &APlayerPawn::TeleportLeftReleased);
+	PlayerInputComponent->BindAction(TEXT("TeleportRight"), IE_Pressed, this, &APlayerPawn::TeleportRightPressed);
+	PlayerInputComponent->BindAction(TEXT("TeleportRight"), IE_Released, this, &APlayerPawn::TeleportRightReleased);
 }
 

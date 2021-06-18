@@ -37,7 +37,11 @@ public:
 	// Action mappings
 	inline void GrabLeftPressed() { LeftController->GrabPressed(); }
 	inline void GrabLeftReleased() { LeftController->GrabReleased(); }
-
 	inline void GrabRightPressed() { RightController->GrabPressed(); }
 	inline void GrabRightReleased() { RightController->GrabReleased(); }
+
+	inline void TeleportLeftPressed() { LeftController->TeleportPressed(); }
+	inline void TeleportLeftReleased() { LeftController->TeleportReleased(); }
+	inline void TeleportRightPressed() { RightController->TeleportPressed(); }
+	inline void TeleportRightReleased() { RightController->TeleportReleased(); }
 };
