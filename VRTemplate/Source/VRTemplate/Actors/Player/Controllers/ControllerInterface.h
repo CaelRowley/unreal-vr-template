@@ -21,6 +21,8 @@ public:
 
 	UPROPERTY(BlueprintReadOnly)
 	AControllerInterface* OtherController;
+	UPROPERTY(BlueprintReadWrite)
+	bool isTeleporterActive;
 
 	// Action mappings
 	UFUNCTION(BlueprintNativeEvent)
