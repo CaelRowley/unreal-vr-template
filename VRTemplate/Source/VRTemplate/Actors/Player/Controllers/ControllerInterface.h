@@ -8,12 +8,15 @@
 #include "GameFramework/Actor.h"
 #include "ControllerInterface.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FActivateTeleport2);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDisableTeleport2);
+
 UCLASS()
 class VRTEMPLATE_API AControllerInterface : public AActor
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this actor's properties
 	AControllerInterface();
 
@@ -24,6 +27,11 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	bool isTeleporterActive;
 
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FActivateTeleport2 ActivateTeleport;
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FDisableTeleport2 DisableTeleport;
+
 	// Action mappings
 	UFUNCTION(BlueprintNativeEvent)
 	void GrabPressed();
@@ -33,5 +41,6 @@ public:
 	UFUNCTION(BlueprintNativeEvent)
 	void TeleportPressed();
 	UFUNCTION(BlueprintNativeEvent)
+
 	void TeleportReleased();
 };
