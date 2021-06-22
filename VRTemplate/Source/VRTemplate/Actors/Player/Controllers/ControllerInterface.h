@@ -8,8 +8,8 @@
 #include "GameFramework/Actor.h"
 #include "ControllerInterface.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FActivateTeleport2);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDisableTeleport2);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FActivateTeleporterDelegate);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FDisableTeleportDelegate);
 
 UCLASS()
 class VRTEMPLATE_API AControllerInterface : public AActor
@@ -28,9 +28,9 @@ public:
 	bool isTeleporterActive;
 
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-	FActivateTeleport2 ActivateTeleport;
+	FActivateTeleporterDelegate ActivateTeleporterDelegate;
 	UPROPERTY(BlueprintAssignable, BlueprintCallable)
-	FDisableTeleport2 DisableTeleport;
+	FDisableTeleportDelegate DisableTeleportDelegate;
 
 	// Action mappings
 	UFUNCTION(BlueprintNativeEvent)
