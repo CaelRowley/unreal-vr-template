@@ -22,12 +22,19 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	AControllerInterface* OtherController;
 	UPROPERTY(BlueprintReadWrite)
-	bool isTeleporterActive;
+	bool IsTeleporterActive;
+	UPROPERTY(BlueprintReadWrite)
+	bool IsValidTeleportDestination;
+	UPROPERTY(BlueprintReadWrite)
+	FVector TeleporterDestination;
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void ActivateTeleporter();
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void DisableTeleporter();
+
+	UFUNCTION(BlueprintPure)
+	void GetTeleporterDestination(FVector& Location, FRotator& Rotation);
 
 	// Action mappings
 	UFUNCTION(BlueprintNativeEvent)
@@ -38,6 +45,5 @@ public:
 	UFUNCTION(BlueprintNativeEvent)
 	void TeleportPressed();
 	UFUNCTION(BlueprintNativeEvent)
-
 	void TeleportReleased();
 };
