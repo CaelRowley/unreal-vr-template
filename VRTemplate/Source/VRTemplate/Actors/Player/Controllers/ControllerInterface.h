@@ -27,6 +27,12 @@ public:
 	bool IsValidTeleportDestination;
 	UPROPERTY(BlueprintReadWrite)
 	FVector TeleporterDestination;
+	UPROPERTY(BlueprintReadWrite)
+	FRotator InitialControllerRotation;
+	UPROPERTY(BlueprintReadWrite)
+	FRotator TeleportRotation;
+	UPROPERTY(BlueprintReadWrite)
+	class UMotionControllerComponent* MotionControllerReference;
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void ActivateTeleporter();
