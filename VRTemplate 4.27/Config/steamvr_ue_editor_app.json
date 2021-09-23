@@ -1,0 +1,18 @@
+{
+	"source": "UE",
+	"applications": [
+		{
+			"app_key": "application.generated.ue.vrtemplate-17155196.ue4editor.exe",
+			"launch_type": "url",
+			"url": "steam://launch/",
+			"action_manifest_path": "C:/Users/Cael/git/unreal/unreal-vr-template/VRTemplate 4.27/Config/SteamVRBindings/steamvr_manifest.json",
+			"strings":
+			{
+				"en_us":
+				{
+					"name": "VRTemplate-17155196 [UE Editor]"
+				}
+			}
+		}
+	]
+}
