@@ -52,4 +52,9 @@ public:
 	void TeleportPressed();
 	UFUNCTION(BlueprintNativeEvent)
 	void TeleportReleased();
+
+	UFUNCTION(BlueprintNativeEvent)
+	void TriggerPressed();
+	UFUNCTION(BlueprintNativeEvent)
+	void TriggerReleased();
 };

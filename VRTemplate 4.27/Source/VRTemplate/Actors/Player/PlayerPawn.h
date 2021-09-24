@@ -43,4 +43,9 @@ public:
 	inline void TeleportLeftReleased() { LeftController->TeleportReleased(); }
 	inline void TeleportRightPressed() { RightController->TeleportPressed(); }
 	inline void TeleportRightReleased() { RightController->TeleportReleased(); }
+
+	inline void TriggerLeftPressed() { LeftController->TriggerPressed(); }
+	inline void TriggerLeftReleased() { LeftController->TriggerReleased(); }
+	inline void TriggerRightPressed() { RightController->TriggerPressed(); }
+	inline void TriggerRightReleased() { RightController->TriggerReleased(); }
 };

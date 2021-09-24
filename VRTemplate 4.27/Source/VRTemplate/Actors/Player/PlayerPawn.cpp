@@ -41,5 +41,10 @@ void APlayerPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction(TEXT("TeleportLeft"), IE_Released, this, &APlayerPawn::TeleportLeftReleased);
 	PlayerInputComponent->BindAction(TEXT("TeleportRight"), IE_Pressed, this, &APlayerPawn::TeleportRightPressed);
 	PlayerInputComponent->BindAction(TEXT("TeleportRight"), IE_Released, this, &APlayerPawn::TeleportRightReleased);
+
+	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Pressed, this, &APlayerPawn::TriggerLeftPressed);
+	PlayerInputComponent->BindAction(TEXT("TriggerLeft"), IE_Released, this, &APlayerPawn::TriggerLeftReleased);
+	PlayerInputComponent->BindAction(TEXT("TriggerRight"), IE_Pressed, this, &APlayerPawn::TriggerRightPressed);
+	PlayerInputComponent->BindAction(TEXT("TriggerRight"), IE_Released, this, &APlayerPawn::TriggerRightReleased);
 }
 

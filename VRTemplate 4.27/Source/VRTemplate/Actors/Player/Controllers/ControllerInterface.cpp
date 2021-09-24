@@ -45,3 +45,14 @@ void AControllerInterface::TeleportReleased_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("TeleportReleased()"));
 }
+
+void AControllerInterface::TriggerPressed_Implementation()
+{
+	UE_LOG(LogTemp, Warning, TEXT("TriggerPressed()"));
+}
+
+void AControllerInterface::TriggerReleased_Implementation()
+{
+	UE_LOG(LogTemp, Warning, TEXT("TriggerReleased()"));
+}
+
