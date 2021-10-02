@@ -45,16 +45,22 @@ public:
 	// Action mappings
 	UFUNCTION(BlueprintNativeEvent)
 	void GrabPressed();
+	virtual void GrabPressed_Implementation();
 	UFUNCTION(BlueprintNativeEvent)
 	void GrabReleased();
+	virtual void GrabReleased_Implementation();
 
 	UFUNCTION(BlueprintNativeEvent)
 	void TeleportPressed();
+	virtual void TeleportPressed_Implementation();
 	UFUNCTION(BlueprintNativeEvent)
 	void TeleportReleased();
+	virtual void TeleportReleased_Implementation();
 
 	UFUNCTION(BlueprintNativeEvent)
 	void TriggerPressed();
+	virtual void TriggerPressed_Implementation();
 	UFUNCTION(BlueprintNativeEvent)
 	void TriggerReleased();
+	virtual void TriggerReleased_Implementation();
 };

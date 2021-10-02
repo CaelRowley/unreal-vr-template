@@ -28,31 +28,30 @@ void AControllerInterface::GetTeleporterDestination(FVector &Location, FRotator 
 // Action mappings
 void AControllerInterface::GrabPressed_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("GrabPressed()"));
+	UE_LOG(LogTemp, Warning, TEXT("AControllerInterface::GrabPressed()"));
 }
 
 void AControllerInterface::GrabReleased_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("GrabReleased()"));
+	UE_LOG(LogTemp, Warning, TEXT("AControllerInterface::GrabReleased()"));
 }
 
 void AControllerInterface::TeleportPressed_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TeleportPressed()"));
+	UE_LOG(LogTemp, Warning, TEXT("AControllerInterface::TeleportPressed()"));
 }
 
 void AControllerInterface::TeleportReleased_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TeleportReleased()"));
+	UE_LOG(LogTemp, Warning, TEXT("AControllerInterface::TeleportReleased()"));
 }
 
 void AControllerInterface::TriggerPressed_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TriggerPressed()"));
+	UE_LOG(LogTemp, Warning, TEXT("AControllerInterface::TriggerPressed()"));
 }
 
 void AControllerInterface::TriggerReleased_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("TriggerReleased()"));
+	UE_LOG(LogTemp, Warning, TEXT("AControllerInterface::TriggerReleased()"));
 }
-
