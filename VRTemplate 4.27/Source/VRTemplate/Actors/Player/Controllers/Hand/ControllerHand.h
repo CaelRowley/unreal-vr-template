@@ -40,6 +40,10 @@ private:
 	// Helpers
 	bool CanClimb() const;
 
+	//  Parameters
+	UPROPERTY(EditDefaultsOnly)
+	class UHapticFeedbackEffect_Base* HapticEffect;
+
 	//  State
 	bool bCanClimb = false;
 };

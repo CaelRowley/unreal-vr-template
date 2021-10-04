@@ -3,6 +3,9 @@
 
 #include "VRTemplate/Actors/Player/Controllers/Hand/ControllerHand.h"
 
+#include "GameFramework/Pawn.h"
+#include "GameFramework/PlayerController.h"
+
 // Called when the game starts or when spawned
 void AControllerHand::BeginPlay()
 {
@@ -34,6 +37,15 @@ void AControllerHand::ActorBeginOverlap(AActor* OverlappedActor, AActor* OtherAc
 
 	if(!bCanClimb && bNewCanClimb) {
 		UE_LOG(LogTemp, Warning, TEXT("Can Climb!"));
+		APawn* Pawn = Cast<APawn>(GetAttachParentActor());
+
+		if(Pawn != nullptr) {
+			APlayerController* Controller = Cast<APlayerController>(Pawn->GetController());
+			if(Controller != nullptr) {
+				EControllerHand ControllerHand = MotionControllerReference->MotionSource == FName("Left") ? EControllerHand::Left : EControllerHand::Right;
+				Controller->PlayHapticEffect(HapticEffect, ControllerHand);
+			}
+		}
 	}
 
 	bCanClimb = bNewCanClimb;
