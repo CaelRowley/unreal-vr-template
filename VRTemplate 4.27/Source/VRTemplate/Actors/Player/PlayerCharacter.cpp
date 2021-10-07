@@ -2,7 +2,7 @@
 
 #include "VRTemplate/Actors/Player/PlayerCharacter.h"
 
-#include "Camera/CameraComponent.h"
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -21,6 +21,8 @@ APlayerCharacter::APlayerCharacter()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	VRROrigin->AddWorldOffset(FVector(0, 0, -GetCapsuleComponent()->GetScaledCapsuleHalfHeight()));
 	
 	LeftController->PairControllers(RightController);
 }
@@ -30,12 +32,10 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if(Camera != nullptr) {
-		FVector NewCameraOffset = Camera->GetComponentLocation() - GetActorLocation();
-		NewCameraOffset.Z = 0;
-		AddActorWorldOffset(NewCameraOffset);
-		VRROrigin->AddWorldOffset(-NewCameraOffset);
-	}
+	FVector NewCameraOffset = Camera->GetComponentLocation() - GetActorLocation();
+	NewCameraOffset.Z = 0;
+	AddActorWorldOffset(NewCameraOffset);
+	VRROrigin->AddWorldOffset(-NewCameraOffset);
 }
 
 // Called to bind functionality to input
