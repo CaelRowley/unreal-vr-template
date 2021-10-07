@@ -2,20 +2,23 @@
 
 #pragma once
 
+#include "CoreMinimal.h"
+
 #include "VRTemplate/Actors/Player/Controllers/ControllerInterface.h"
 
-#include "CoreMinimal.h"
-#include "GameFramework/Pawn.h"
-#include "PlayerPawn.generated.h"
+#include "Camera/CameraComponent.h"
+
+#include "GameFramework/Character.h"
+#include "PlayerCharacter.generated.h"
 
 UCLASS()
-class VRTEMPLATE_API APlayerPawn : public APawn
+class VRTEMPLATE_API APlayerCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this pawn's properties
-	APlayerPawn();
+	// Sets default values for this character's properties
+	APlayerCharacter();
 
 protected:
 	// Called when the game starts or when spawned
@@ -27,6 +30,11 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(VisibleAnywhere)
+	class UCameraComponent* Camera;
+	UPROPERTY(BlueprintReadOnly)
+	class USceneComponent* VRROrigin;
 
 	UPROPERTY(BlueprintReadWrite)
 	AControllerInterface* LeftController;

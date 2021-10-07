@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "VRTemplate/Actors/Player/Controllers/Hand/ControllerHand.h"
 
 #include "GameFramework/Pawn.h"
