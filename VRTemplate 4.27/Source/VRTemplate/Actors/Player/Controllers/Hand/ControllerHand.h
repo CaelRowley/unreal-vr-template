@@ -3,19 +3,22 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
 #include "GameFramework/Actor.h"
+
 #include "VRTemplate/Actors/Player/Controllers/ControllerInterface.h"
+
 #include "ControllerHand.generated.h"
 
-/**
- * 
- */
 UCLASS()
 class VRTEMPLATE_API AControllerHand : public AControllerInterface
 {
 	GENERATED_BODY()
 
 public: 
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+	
 	// Action mappings
 	void GrabPressed_Implementation() override;
 	void GrabReleased_Implementation() override;
@@ -46,5 +49,7 @@ private:
 
 	//  State
 	bool bCanClimb = false;
+	bool bIsClimbing = false;
+	FVector ClimbingStartLocation;
 };
 

@@ -22,7 +22,9 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	VRROrigin->AddWorldOffset(FVector(0, 0, -GetCapsuleComponent()->GetScaledCapsuleHalfHeight()));
+	ScaledCapsuleHalfHeight = GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
+
+	VRROrigin->AddWorldOffset(FVector(0, 0, -ScaledCapsuleHalfHeight));
 	
 	LeftController->PairControllers(RightController);
 }

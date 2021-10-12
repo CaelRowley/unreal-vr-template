@@ -35,6 +35,8 @@ public:
 	class UCameraComponent* Camera;
 	UPROPERTY(BlueprintReadOnly)
 	class USceneComponent* VRROrigin;
+	UPROPERTY(BlueprintReadWrite)
+	float ScaledCapsuleHalfHeight;
 
 	UPROPERTY(BlueprintReadWrite)
 	AControllerInterface* LeftController;

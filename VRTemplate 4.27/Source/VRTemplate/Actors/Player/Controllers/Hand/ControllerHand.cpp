@@ -1,7 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include "VRTemplate/Actors/Player/PlayerCharacter.h"
 #include "VRTemplate/Actors/Player/Controllers/Hand/ControllerHand.h"
 
+#include "Math/Vector.h"
+
+#include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Pawn.h"
 #include "GameFramework/PlayerController.h"
 
@@ -12,6 +17,22 @@ void AControllerHand::BeginPlay()
 	
 	OnActorBeginOverlap.AddDynamic(this, &AControllerHand::ActorBeginOverlap);
 	OnActorEndOverlap.AddDynamic(this, &AControllerHand::ActorEndOverlap);
+}
+
+// Called every frame
+void AControllerHand::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (bIsClimbing)
+	{
+		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(GetAttachParentActor());		
+		FVector ControllerHandDelta = FVector(ControllerLocation.X, ControllerLocation.Y, ControllerLocation.Z  + PlayerCharacter->ScaledCapsuleHalfHeight) - ClimbingStartLocation;
+
+		UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *ControllerHandDelta.ToString());
+
+		PlayerCharacter->AddActorWorldOffset(-ControllerHandDelta);
+	}
 }
 
 // Helpers
@@ -65,11 +86,43 @@ void AControllerHand::ActorEndOverlap(AActor* OverlappedActor, AActor* OtherActo
 void AControllerHand::GrabPressed_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("AControllerHand::GrabPressed()"));
+
+	if (!bCanClimb) return;
+
+	if (!bIsClimbing)
+	{
+		bIsClimbing = true;
+		
+		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(GetAttachParentActor());
+		ClimbingStartLocation = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z  + PlayerCharacter->ScaledCapsuleHalfHeight);
+
+		AControllerHand* OtherControllerHand = Cast<AControllerHand>(OtherController);
+		OtherControllerHand->bIsClimbing = false;
+
+		ACharacter* Character = Cast<ACharacter>(GetAttachParentActor());
+		if (Character != nullptr)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("AControllerHand::SetMovementMode(EMovementMode::MOVE_Flying)"));
+			Character->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Flying);
+		}
+	}
 }
 
 void AControllerHand::GrabReleased_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("AControllerHand::GrabReleased()"));
+
+	if (bIsClimbing)
+	{
+		bIsClimbing = false;
+
+		ACharacter* Character = Cast<ACharacter>(GetAttachParentActor());
+		if (Character != nullptr)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("AControllerHand::SetMovementMode(EMovementMode::MOVE_Falling)"));
+			Character->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Falling);
+		}
+	}
 }
 
 void AControllerHand::TeleportPressed_Implementation()

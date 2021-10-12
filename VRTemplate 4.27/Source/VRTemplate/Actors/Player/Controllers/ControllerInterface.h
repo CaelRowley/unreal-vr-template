@@ -34,6 +34,9 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 	class UMotionControllerComponent* MotionControllerReference;
 
+	UPROPERTY(BlueprintReadWrite)
+	FVector ControllerLocation;
+
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void ActivateTeleporter();
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
