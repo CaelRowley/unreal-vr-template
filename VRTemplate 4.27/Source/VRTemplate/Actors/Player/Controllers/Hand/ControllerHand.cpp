@@ -27,11 +27,8 @@ void AControllerHand::Tick(float DeltaTime)
 	if (bIsClimbing)
 	{
 		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(GetAttachParentActor());		
-		FVector ControllerHandDelta = FVector(ControllerLocation.X, ControllerLocation.Y, ControllerLocation.Z  + PlayerCharacter->ScaledCapsuleHalfHeight) - ClimbingStartLocation;
 
-		UE_LOG(LogTemp, Warning, TEXT("Location: %s"), *ControllerHandDelta.ToString());
-
-		PlayerCharacter->AddActorWorldOffset(-ControllerHandDelta);
+		PlayerCharacter->AddActorWorldOffset(ClimbingStartLocation - ControllerLocation);
 	}
 }
 
@@ -93,8 +90,7 @@ void AControllerHand::GrabPressed_Implementation()
 	{
 		bIsClimbing = true;
 		
-		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(GetAttachParentActor());
-		ClimbingStartLocation = FVector(GetActorLocation().X, GetActorLocation().Y, GetActorLocation().Z  + PlayerCharacter->ScaledCapsuleHalfHeight);
+		ClimbingStartLocation = ControllerLocation;
 
 		AControllerHand* OtherControllerHand = Cast<AControllerHand>(OtherController);
 		OtherControllerHand->bIsClimbing = false;
