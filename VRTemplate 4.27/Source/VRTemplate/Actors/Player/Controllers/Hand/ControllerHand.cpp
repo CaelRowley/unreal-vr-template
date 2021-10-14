@@ -1,14 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "VRTemplate/Actors/Player/PlayerCharacter.h"
 #include "VRTemplate/Actors/Player/Controllers/Hand/ControllerHand.h"
 
-#include "Math/Vector.h"
+#include "VRTemplate/Actors/Player/PlayerCharacter.h"
 
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "GameFramework/Pawn.h"
-#include "GameFramework/PlayerController.h"
 
 // Called when the game starts or when spawned
 void AControllerHand::BeginPlay()
@@ -27,7 +24,6 @@ void AControllerHand::Tick(float DeltaTime)
 	if (bIsClimbing)
 	{
 		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(GetAttachParentActor());		
-
 		PlayerCharacter->AddActorWorldOffset(ClimbingStartLocation - ControllerLocation);
 	}
 }
@@ -38,8 +34,10 @@ bool AControllerHand::CanClimb() const
 	TArray<AActor*> OverlappingActors;
 	GetOverlappingActors(OverlappingActors);
 
-	for (AActor* OverlappingActor : OverlappingActors) {
-		if (OverlappingActor->ActorHasTag(TEXT("Climbable"))) {
+	for (AActor* OverlappingActor : OverlappingActors) 
+	{
+		if (OverlappingActor->ActorHasTag(TEXT("Climbable"))) 
+		{
 			return true;
 		}
 	}
@@ -52,13 +50,15 @@ void AControllerHand::ActorBeginOverlap(AActor* OverlappedActor, AActor* OtherAc
 {
 	bool bNewCanClimb = CanClimb();
 
-	if(!bCanClimb && bNewCanClimb) {
-		UE_LOG(LogTemp, Warning, TEXT("Can Climb!"));
+	if(!bCanClimb && bNewCanClimb) 
+	{
 		APawn* Pawn = Cast<APawn>(GetAttachParentActor());
 
-		if(Pawn != nullptr) {
+		if(Pawn != nullptr) 
+		{
 			APlayerController* Controller = Cast<APlayerController>(Pawn->GetController());
-			if(Controller != nullptr) {
+			if(Controller != nullptr) 
+			{
 				EControllerHand ControllerHand = MotionControllerReference->MotionSource == FName("Left") ? EControllerHand::Left : EControllerHand::Right;
 				Controller->PlayHapticEffect(HapticEffect, ControllerHand);
 			}
@@ -70,13 +70,7 @@ void AControllerHand::ActorBeginOverlap(AActor* OverlappedActor, AActor* OtherAc
 
 void AControllerHand::ActorEndOverlap(AActor* OverlappedActor, AActor* OtherActor)
 {
-	bool bNewCanClimb = CanClimb();
-
-	if(bCanClimb && !bNewCanClimb) {
-		UE_LOG(LogTemp, Warning, TEXT("Can't Climb!"));
-	}
-
-	bCanClimb = bNewCanClimb;
+	bCanClimb = CanClimb();
 }
 
 // Action mappings
@@ -98,7 +92,6 @@ void AControllerHand::GrabPressed_Implementation()
 		ACharacter* Character = Cast<ACharacter>(GetAttachParentActor());
 		if (Character != nullptr)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("AControllerHand::SetMovementMode(EMovementMode::MOVE_Flying)"));
 			Character->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Flying);
 		}
 	}
@@ -115,7 +108,6 @@ void AControllerHand::GrabReleased_Implementation()
 		ACharacter* Character = Cast<ACharacter>(GetAttachParentActor());
 		if (Character != nullptr)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("AControllerHand::SetMovementMode(EMovementMode::MOVE_Falling)"));
 			Character->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Falling);
 		}
 	}

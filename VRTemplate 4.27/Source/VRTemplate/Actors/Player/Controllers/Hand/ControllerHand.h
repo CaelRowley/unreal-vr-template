@@ -4,9 +4,9 @@
 
 #include "CoreMinimal.h"
 
-#include "GameFramework/Actor.h"
-
 #include "VRTemplate/Actors/Player/Controllers/ControllerInterface.h"
+
+#include "GameFramework/Actor.h"
 
 #include "ControllerHand.generated.h"
 
@@ -43,11 +43,11 @@ private:
 	// Helpers
 	bool CanClimb() const;
 
-	//  Parameters
+	// Parameters
 	UPROPERTY(EditDefaultsOnly)
 	class UHapticFeedbackEffect_Base* HapticEffect;
 
-	//  State
+	// State
 	bool bCanClimb = false;
 	bool bIsClimbing = false;
 	FVector ClimbingStartLocation;

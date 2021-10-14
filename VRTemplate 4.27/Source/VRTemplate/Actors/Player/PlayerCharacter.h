@@ -7,8 +7,8 @@
 #include "VRTemplate/Actors/Player/Controllers/ControllerInterface.h"
 
 #include "Camera/CameraComponent.h"
-
 #include "GameFramework/Character.h"
+
 #include "PlayerCharacter.generated.h"
 
 UCLASS()
@@ -21,7 +21,7 @@ public:
 	APlayerCharacter();
 
 protected:
-	// Called when the game starts or when spawned
+	// Called when the game starts or when spawned 
 	virtual void BeginPlay() override;
 
 public:	

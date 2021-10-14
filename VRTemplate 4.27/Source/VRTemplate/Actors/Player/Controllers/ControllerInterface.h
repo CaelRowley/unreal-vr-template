@@ -2,10 +2,11 @@
 
 #pragma once
 
-#include "MotionControllerComponent.h"
-
 #include "CoreMinimal.h"
+
+#include "MotionControllerComponent.h"
 #include "GameFramework/Actor.h"
+
 #include "ControllerInterface.generated.h"
 
 UCLASS()
@@ -22,6 +23,8 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	AControllerInterface* OtherController;
 	UPROPERTY(BlueprintReadWrite)
+	FVector ControllerLocation;
+	UPROPERTY(BlueprintReadWrite)
 	bool IsTeleporterActive;
 	UPROPERTY(BlueprintReadWrite)
 	bool IsValidTeleportDestination;
@@ -33,9 +36,6 @@ public:
 	FRotator TeleportRotation;
 	UPROPERTY(BlueprintReadWrite)
 	class UMotionControllerComponent* MotionControllerReference;
-
-	UPROPERTY(BlueprintReadWrite)
-	FVector ControllerLocation;
 
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
 	void ActivateTeleporter();
